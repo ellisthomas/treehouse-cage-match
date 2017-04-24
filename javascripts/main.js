@@ -23,11 +23,14 @@ $(document).ready(function(){
 // 	  console.log(error1);
 // 	});
 
+ 
+
 let players = [];
 
 $("#btn").on("click", function() {
 	let user1 = $("#player1").val();
 	let user2 = $("#player2").val();
+	$("#background").hide("slow");
 
 	// alert("you clicked me");
 
@@ -35,13 +38,14 @@ $("#btn").on("click", function() {
 	const writeToDom = (players) => {
 		let domString = "";
 		for(let i = 0; i < players.length; i++) {
-		domString += `<div class="row">`;
-		domString += `<div class="col-md-6">`;
-		domString += `<a href="#" class="thumbnail">`;
-		domString += `<img class="pic" src="${players[i].gravatar_url}">`;
+		domString += `<div class="cage">`;
+		// domString += `<div class="row">`;
+		// domString += `<div class="col-xs-6 col-xs-6">`;
+		// domString += `<a href="#" class="thumbnail">`;
+		domString += `<img class="pic img-responsive" src="${players[i].gravatar_url}">`;
 		domString += `<p>${players[i].name}</p>`;
 		domString += `<p class="points"> Total Points: ${players[i].points.total}</p>`;
-		domString += `</a>`;
+		// domString += `</a>`;
 		domString += `</div></div>`;
 		}
 		$("#container").append(domString);
@@ -78,10 +82,10 @@ $("#btn").on("click", function() {
             }
             for (let j = 0; j < winnerBadgesArray.length; j++) {
                 winnerBadgesStrings += `<div>`;
-                winnerBadgesStrings += `<img class="badgeImage col-md-4" src="${winnerBadgesArray[j]}"`;
+                winnerBadgesStrings += `<img class="badgeImage col-lg-6" src="${winnerBadgesArray[j]}"`;
                 winnerBadgesStrings += `</div>`;
             }
-            $("#badges").append(winnerBadgesStrings);
+            // $("#badges").append(winnerBadgesStrings);
         };
 	
 
@@ -116,23 +120,7 @@ $("#btn").on("click", function() {
 		});
 
 
-		$(".animation").on("click",function(){
-		$(".image").animate({height: "0px"});
-		$(".image").animate({width: "0px"});
-        $(".image").animate({height: "250px"});        
-        $(".image").animate({width: "250px"});        
-        $(".image").animate({width: "0px"});
-		$(".image").animate({height: "0px"});
-        $(".image").animate({width: "250px"});        
-        $(".image").animate({height: "250px"}); 
 
-
-        $(".badgeImage").animate({height: "+=50px"});
-		$(".badgeImage").animate({width: "+=50px"});
-        $(".badgeImage").animate({height: "-=50px"});        
-        $(".badgeImage").animate({width: "-=50px"});               
-	});
-		
 });
 
 
