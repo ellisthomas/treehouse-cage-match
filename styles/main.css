@@ -1,6 +1,29 @@
 body {
 	background-color: slategray;
+	/*padding-top: 70px;*/
 }
+h1 {
+	background-color: black;
+	text-align: center;
+	font-size: 100px;
+	color: white;
+	margin-top: -20px;
+
+}
+
+/*#btn {
+    height: 50px; 
+    width: 200px; 
+    border-radius: 30%;
+}
+*/
+p {
+	font-weight: 900;
+	font-size: 25px;
+	text-align: center;
+}
+
+
 #background {
 	background-image: url("http://cdn1.thecomeback.com/wp-content/uploads/sites/94/2015/04/celeb_deathmatch.jpg");
 	background-repeat: no-repeat;
@@ -18,6 +41,7 @@ body {
    	z-index: -1
 }
 
+
 .cage {
 	border: 1px solid black;
 	padding: 5px;
@@ -27,13 +51,6 @@ body {
 	background-color: white;
 	opacity: 0.9;
 }
-
-
-/*.pic {
-	width: 500px;
-	height: 500px;
-
-}*/
 
 #winner {
 	border: 2px solid black;

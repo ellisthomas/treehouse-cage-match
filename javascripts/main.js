@@ -42,7 +42,7 @@ $("#btn").on("click", function() {
 		// domString += `<div class="row">`;
 		// domString += `<div class="col-xs-6 col-xs-6">`;
 		// domString += `<a href="#" class="thumbnail">`;
-		domString += `<img class="pic img-responsive" src="${players[i].gravatar_url}">`;
+		domString += `<img class="pic img-rounded img-responsive" src="${players[i].gravatar_url}">`;
 		domString += `<p>${players[i].name}</p>`;
 		domString += `<p class="points"> Total Points: ${players[i].points.total}</p>`;
 		// domString += `</a>`;
